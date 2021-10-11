@@ -12,6 +12,8 @@ Version: 1.7.2
 Author URI: http://ma.tt/
 */
 
+//Comment by Hanning
+
 function hello_dolly_get_lyric() {
 	/** These are the lyrics to Hello Dolly */
 	$lyrics = "Hello, Dolly
