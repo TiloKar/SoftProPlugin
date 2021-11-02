@@ -14,6 +14,7 @@ Author URI: http://ma.tt/
 
 //Comment by Hanning
 //Comment 2 by Hanning
+//Comment 3 by Hanning
 
 function hello_dolly_get_lyric() {
 	/** These are the lyrics to Hello Dolly */
