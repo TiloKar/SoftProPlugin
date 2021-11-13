@@ -2,6 +2,8 @@ name: Main Test WL
 
 on: push
 
+workflow_dispatch:
+
 jobs:
   super-lint:
     name: Lint Code Base
