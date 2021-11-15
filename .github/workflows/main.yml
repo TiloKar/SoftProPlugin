@@ -26,7 +26,12 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: uploadToSandboxServer
         env:
-          SERVER: ${{ secrets.FTP_SERVERNAME }}
+          FTPSERVER: ${{ secrets.FTP_SERVERNAME }}
+          FTPUSER: ${{ secrets.FTP_USERNAME }}
+          FTPPW: ${{ secrets.FTP_PASSWORD_SOFTPRO }}
         run: |
-          echo $PATH
-          echo $SERVER
+          git config git-ftp.url "$FTPSERVER"
+          git config git-ftp.user "$FTPUSER"
+          git config git-ftp.password "$FTPPW"
+          git ftp init
+          git ftp catchup
