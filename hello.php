@@ -1,20 +1,17 @@
 <?php
 /**
- * @package Hello_Dolly
- * @version 1.1.0
+ * @package ERP_EV24
+ * @version 0.0.1
  */
 /*
-Plugin Name: Hello_Dolly
-Plugin URI: http://wordpress.org/plugins/hello-dolly/
-Description: This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from <cite>Hello, Dolly</cite> in the upper right of your admin screen on every page.
-Author: Kevin Beeskow, Hanning Liu, Tilo Karczewski, Duc Ngo Minh
-Version: 1.1.0
-Author URI: http://ma.tt/
+Plugin Name: ERP_EV24
+Plugin URI: http://wordpress.org/plugins/ERP_EV24/
+Description: This is a development sandbox for educational training of building wordpress plugins in a DevOps toolchain. Just starting based on Hello Dolly
+Author: Kevin Beeskow, Hanning Liu, Tilo Karczewski, Duc Ngo Minh, William Liesche
+Version: 0.0.1
+Author URI: https://github.com/TiloKar/SoftProDoc
 */
 
-//Comment by Hanning
-//Comment 2 by Hanning
-//Comment 3 by Hanning
 
 function hello_dolly_get_lyric() {
 	/** These are the lyrics to Hello Dolly */
