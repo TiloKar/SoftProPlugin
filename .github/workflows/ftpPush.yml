@@ -33,4 +33,5 @@ jobs:
           git config git-ftp.url "$FTPSERVER"
           git config git-ftp.user "$FTPUSER"
           git config git-ftp.password "$FTPPW"
+          git push
           git ftp push
