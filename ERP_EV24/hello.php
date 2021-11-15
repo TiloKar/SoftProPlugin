@@ -12,83 +12,36 @@ Version: 0.0.1
 Author URI: https://github.com/TiloKar/SoftProDoc
 */
 
-
-function hello_dolly_get_lyric() {
-	/** These are the lyrics to Hello Dolly */
-	$lyrics = "Hello, Dolly
-Well, hello, Dolly
-It's so nice to have you back where you belong
-You're lookin' swell, Dolly
-I can tell, Dolly
-You're still glowin', you're still crowin'
-You're still goin' strong
-I feel the room swayin'
-While the band's playin'
-One of our old favorite songs from way back when
-So, take her wrap, fellas
-Dolly, never go away again
-Hello, Dolly
-Well, hello, Dolly
-It's so nice to have you back where you belong
-You're lookin' swell, Dolly
-I can tell, Dolly
-You're still glowin', you're still crowin'
-You're still goin' strong
-I feel the room swayin'
-While the band's playin'
-One of our old favorite songs from way back when
-So, golly, gee, fellas
-Have a little faith in me, fellas
-Dolly, never go away
-Promise, you'll never go away
-Dolly'll never go away again";
-
-	// Here we split it into lines.
-	$lyrics = explode( "\n", $lyrics );
-
-	// And then randomly choose a line.
-	return wptexturize( $lyrics[ mt_rand( 0, count( $lyrics ) - 1 ) ] );
-}
-
-// This just echoes the chosen line, we'll position it later.
-function hello_dolly() {
-	$chosen = hello_dolly_get_lyric();
-	$lang   = '';
-	if ( 'en_' !== substr( get_user_locale(), 0, 3 ) ) {
-		$lang = ' lang="en"';
-	}
-
+// This just echoes hello world in container.
+function hello_world() {
 	printf(
-		'<p id="dolly"><span class="screen-reader-text">%s </span><span dir="ltr"%s>%s</span></p>',
-		__( 'Quote from Hello Dolly song, by Jerry Herman:', 'hello-dolly' ),
-		$lang,
-		$chosen
+		'<p id="helloworld"><span class="screen-reader-text">ERP_EV24 sagt Hallo Welt </span><span dir="ltr" lang="de">ERP_EV24 sagt Hallo Welt</span></p>'
 	);
 }
 
 // Now we set that function up to execute when the admin_notices action is called.
-add_action( 'admin_notices', 'hello_dolly' );
+add_action( 'admin_notices', 'hello_world' );
 
 // We need some CSS to position the paragraph.
-function dolly_css() {
+function helloworld_css() {
 	echo "
 	<style type='text/css'>
-	#dolly {
+	#helloworld {
 		float: right;
 		padding: 5px 10px;
 		margin: 0;
 		font-size: 12px;
 		line-height: 1.6666;
 	}
-	.rtl #dolly {
+	.rtl #helloworld {
 		float: left;
 	}
-	.block-editor-page #dolly {
+	.block-editor-page #helloworld {
 		display: none;
 	}
 	@media screen and (max-width: 782px) {
-		#dolly,
-		.rtl #dolly {
+		#helloworld,
+		.rtl #helloworld {
 			float: none;
 			padding-left: 0;
 			padding-right: 0;
@@ -98,4 +51,4 @@ function dolly_css() {
 	";
 }
 
-add_action( 'admin_head', 'dolly_css' );
+add_action( 'admin_head', 'helloworld_css' );
