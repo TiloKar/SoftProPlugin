@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Tilos_Testaction
+name: FTP_INIT
 
 # Controls when the workflow will run
 on:
@@ -33,5 +33,4 @@ jobs:
           git config git-ftp.url "$FTPSERVER"
           git config git-ftp.user "$FTPUSER"
           git config git-ftp.password "$FTPPW"
-          git ftp init
-          git ftp catchup
+          git ftp push
