@@ -1,14 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Tilos_Testaction
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches: [ dev ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  ftp_upload:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -34,9 +32,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: git-ftp push
-        uses: TiloKar/git-ftp/@main
-        with:
-            url: "testurl from caller action"
-            user: ${{ secrets.FTP_USERNAME }}
-            password: "testpw from caller action"
+          curl
+          
