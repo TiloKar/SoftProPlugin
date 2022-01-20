@@ -15,7 +15,7 @@ Author URI: https://github.com/TiloKar/SoftProDoc
 //eigene testklasse
 include 'inits.php';
 
-$myO = new InitDB();
+//$myO = new InitDB();
 
 // This just echoes hello world in container.
 // aus hello-dolly übernommen, um die basics zu testen
@@ -27,9 +27,8 @@ function hello_world() {
 
 // Now we set that function up to execute when the admin_notices action is called.
 // aus hello-dolly übernommen, um die basics zu testen
-add_action( 'admin_notices', function() {
-    $myO->makeADummyDBEntry();
-} );
+add_action( 'admin_notices', [ __NAMESPACE__ . '\InitDB','makeADummyDBEntry' ] );
+//add_action( 'admin_notices', 'hello_world');
 
 // We need some CSS to position the paragraph.
 // aus hello-dolly übernommen, um die basics zu testen
