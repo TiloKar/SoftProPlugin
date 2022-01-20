@@ -3,6 +3,7 @@
 class InitDB{
 	public function __construct() {
         //register_activation_hook( __FILE__, array( $this, 'makeADummyDBEntry' ) );
+		//hier später z.B. DB inits mit wp API
     }
 
 

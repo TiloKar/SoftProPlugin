@@ -27,7 +27,9 @@ function hello_world() {
 
 // Now we set that function up to execute when the admin_notices action is called.
 // aus hello-dolly übernommen, um die basics zu testen
-add_action( 'admin_notices', '$myO->makeADummyDBEntry()' );
+add_action( 'admin_notices', function() {
+    $myO->makeADummyDBEntry();
+} );
 
 // We need some CSS to position the paragraph.
 // aus hello-dolly übernommen, um die basics zu testen
