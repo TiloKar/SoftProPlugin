@@ -12,7 +12,13 @@ Version: 0.0.3
 Author URI: https://github.com/TiloKar/SoftProDoc
 */
 
+//eigene testklasse
+include 'inits.php';
+
+$ourObject = new InitDB();
+
 // This just echoes hello world in container.
+// aus hello-dolly übernommen, um die basics zu testen
 function hello_world() {
 	printf(
 		'<p id="helloworld"><span class="screen-reader-text">ERP_EV24 sagt Hallo Welt in Version 3 </span><span dir="ltr" lang="de">ERP_EV24 sagt Hallo Welt in Version 3</span></p>'
@@ -20,9 +26,11 @@ function hello_world() {
 }
 
 // Now we set that function up to execute when the admin_notices action is called.
-add_action( 'admin_notices', 'hello_world' );
+// aus hello-dolly übernommen, um die basics zu testen
+add_action( 'admin_notices', '$ourObject.makeADummyDBEntry' );
 
 // We need some CSS to position the paragraph.
+// aus hello-dolly übernommen, um die basics zu testen
 function helloworld_css() {
 	echo "
 	<style type='text/css'>
@@ -50,5 +58,7 @@ function helloworld_css() {
 	</style>
 	";
 }
-
+// aus hello-dolly übernommen, um die basics zu testen
 add_action( 'admin_head', 'helloworld_css' );
+
+?>
