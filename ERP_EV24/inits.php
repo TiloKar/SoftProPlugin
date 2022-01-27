@@ -10,7 +10,7 @@ class InitDB{
     public static function makeADummyDBEntry(){
 		//
         printf(
-    		'<p id="helloworld"><span class="screen-reader-text">ERP_EV24 sagt Hallo Welt aus Object</span><span dir="ltr" lang="de">ERP_EV24 sagt Hallo Welt aus Object</span></p>'
+    		'<p id="helloworld"><span class="screen-reader-text">MeinVerein_24 sagt Hallo Welt aus Object</span><span dir="ltr" lang="de">MeinVerein_24 sagt Hallo Welt aus Object</span></p>'
     	);
 	}
 }
